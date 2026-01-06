@@ -6,6 +6,10 @@
     box-sizing: border-box;
     font-family: 'poppins' sans-serif;
 }
+img{
+    max-width: 100%;
+    height: auto;
+}
 
 .portfolio-container {
     min-height: 100vh;
@@ -181,4 +185,63 @@ transition: transform .5s;
 {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+@media (max-width: 768px){
+
+  /* Layout column me */
+  .portfolio-container{
+    flex-direction: column;
+  }
+
+  .left-container,
+  .right-container{
+    width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  /* Navbar fix */
+  .navlist{
+    position: relative;
+    height: auto;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  /* Content center */
+  .content{
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .content h1{
+    font-size: 2rem;
+  }
+
+  .content .detail{
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Buttons stack */
+  .btn-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  button:nth-child(2){
+    margin-left: 0;
+  }
+
+  /* ICONS horizontal */
+  .icons{
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+  }
+
+  /* 🔴 MOST IMPORTANT: circles hata do */
+  .design{
+    display: none;
+  }
 }
